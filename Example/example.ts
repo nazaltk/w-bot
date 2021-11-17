@@ -31,7 +31,11 @@ async function example() {
 	
 	conn.on ('message-new', async m => {
 		console.log(m)
-	})
+    })
+    
+    conn.on('qr', qr => {
+        console.log(qr)
+    }
 
     // loads the auth file credentials if present
     /*  Note: one can take this auth_info.json file and login again from any computer without having to scan the QR code, 
