@@ -11,10 +11,10 @@ import {
     waChatKey,
 } from '../src/WAConnection'
 import * as fs from 'fs'
-var express = require('express');
+import express from 'express'
 var app     = express();
 
-app.set('port', (5000));
+app.set('port', (process.env.port || 5000));
 
 //For avoidong Heroku $PORT error
 app.get('/', function(request, response) {
