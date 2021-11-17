@@ -1,0 +1,1 @@
+worker: node --inspect -r ts-node/register Example/example.ts
